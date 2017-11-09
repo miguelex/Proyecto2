@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Modelos.Provincia>
+
+@{
+    ViewBag.Title = "Provincias";
+}
+
+<h2>Provincias</h2>
+
+<p>
+    @Html.ActionLink(" Añadir ", "Create",null ,new { @class = "btn btn-default btn-success glyphicon glyphicon-plus" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("ID")
+        </th>
+        <th>
+            @Html.Label("Nombre Provincia")
+        </th>
+        <th>
+            @Html.Label("Operaciones")
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreProvincia)
+        </td>
+        <td>
+            @Html.ActionLink(" Editar ", "Edit", new { id=item.id }, new { @class = "btn btn-default btn-primary glyphicon glyphicon-edit" }) |
+            @Html.ActionLink(" Detalles ", "Details", new { id=item.id }, new { @class = "btn btn-default btn-info glyphicon glyphicon-eye-open" }) |
+            @Html.ActionLink(" Borrar ", "Delete", new { id=item.id }, new { @class = "btn btn-default btn-danger glyphicon glyphicon-trash" })
+        </td>
+    </tr>
+}
+
+</table>
