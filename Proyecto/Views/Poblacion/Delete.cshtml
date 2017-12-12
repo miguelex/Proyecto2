@@ -1,0 +1,40 @@
+﻿@model Modelos.Poblacion
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Estas seguro de que deseas borrar la población?</h3>
+<div>
+    <h4>Población</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Provincia: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Provincia.NombreProvincia)
+        </dd>
+
+        <dt>
+            @Html.Label("Población: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombrePoblacion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-danger" /> |
+            @Html.ActionLink("Atrás", "Index")
+        </div>
+    }
+</div>

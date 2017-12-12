@@ -1,4 +1,8 @@
-﻿@model IEnumerable<Modelos.Provincia>
+﻿@*@model IEnumerable<Modelos.Provincia>*@
+@using Modelos;
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Provincia>
 
 @{
     ViewBag.Title = "Provincias";
@@ -39,3 +43,7 @@
 }
 
 </table>
+
+<div>
+    @Html.PagedListPager(Model, page => Url.Action ("Index", new { pagina = page }))
+</div>

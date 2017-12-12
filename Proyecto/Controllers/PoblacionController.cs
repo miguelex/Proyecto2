@@ -11,111 +11,114 @@ using PagedList;
 
 namespace Proyecto.Controllers
 {
-    public class ProvinciasController : Controller
+    public class PoblacionController : Controller
     {
         private DBTFGContext db = new DBTFGContext();
 
-        // GET: Provincias
+        // GET: Poblacions
         public ActionResult Index(int? pagina)
         {
             var NumeroPagina = pagina ?? 1;
-            var TamañoPagina = 10;
-            var lista = db.Provincia.OrderBy(x => x.id).ToPagedList(NumeroPagina, TamañoPagina);
-            return View(lista);
-           // return View(db.Provincia.ToList());
+            var TamañoPagina = 25;
+            var poblacion = db.Poblacion.Include(p => p.Provincia).OrderBy(x => x.id).ToPagedList(NumeroPagina, TamañoPagina);
+            return View(poblacion);
         }
 
-        // GET: Provincias/Details/5
+        // GET: Poblacions/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Provincia provincia = db.Provincia.Find(id);
-            if (provincia == null)
+            Poblacion poblacion = db.Poblacion.Find(id);
+            if (poblacion == null)
             {
                 return HttpNotFound();
             }
-            return View(provincia);
+            return View(poblacion);
         }
 
-        // GET: Provincias/Create
+        // GET: Poblacions/Create
         public ActionResult Create()
         {
+            ViewBag.idProvincia = new SelectList(db.Provincia, "id", "NombreProvincia");
             return View();
         }
 
-        // POST: Provincias/Create
+        // POST: Poblacions/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,NombreProvincia")] Provincia provincia)
+        public ActionResult Create([Bind(Include = "id,NombrePoblacion,idProvincia")] Poblacion poblacion)
         {
             if (ModelState.IsValid)
             {
-                db.Provincia.Add(provincia);
+                db.Poblacion.Add(poblacion);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(provincia);
+            ViewBag.idProvincia = new SelectList(db.Provincia, "id", "NombreProvincia", poblacion.idProvincia);
+            return View(poblacion);
         }
 
-        // GET: Provincias/Edit/5
+        // GET: Poblacions/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Provincia provincia = db.Provincia.Find(id);
-            if (provincia == null)
+            Poblacion poblacion = db.Poblacion.Find(id);
+            if (poblacion == null)
             {
                 return HttpNotFound();
             }
-            return View(provincia);
+            ViewBag.idProvincia = new SelectList(db.Provincia, "id", "NombreProvincia", poblacion.idProvincia);
+            return View(poblacion);
         }
 
-        // POST: Provincias/Edit/5
+        // POST: Poblacions/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,NombreProvincia")] Provincia provincia)
+        public ActionResult Edit([Bind(Include = "id,NombrePoblacion,idProvincia")] Poblacion poblacion)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(provincia).State = EntityState.Modified;
+                db.Entry(poblacion).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(provincia);
+            ViewBag.idProvincia = new SelectList(db.Provincia, "id", "NombreProvincia", poblacion.idProvincia);
+            return View(poblacion);
         }
 
-        // GET: Provincias/Delete/5
+        // GET: Poblacions/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Provincia provincia = db.Provincia.Find(id);
-            if (provincia == null)
+            Poblacion poblacion = db.Poblacion.Find(id);
+            if (poblacion == null)
             {
                 return HttpNotFound();
             }
-            return View(provincia);
+            return View(poblacion);
         }
 
-        // POST: Provincias/Delete/5
+        // POST: Poblacions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Provincia provincia = db.Provincia.Find(id);
-            db.Provincia.Remove(provincia);
+            Poblacion poblacion = db.Poblacion.Find(id);
+            db.Poblacion.Remove(poblacion);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
