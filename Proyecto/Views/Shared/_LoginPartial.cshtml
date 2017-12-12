@@ -1,0 +1,18 @@
+﻿@* Vista parcial para mostrar las opciones de registro y login o cerrar sesión y perfil *@
+
+@if (Request.IsAuthenticated)
+{
+    // El usuario esta logeado
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="~/home/ver/@Session["id"]">Hola, @Session["usuario"]</a> </li>
+        <li>@Html.ActionLink("Finalizar sesión", "Logout", "Home")</li>
+    </ul>
+}
+else
+{
+    // El usuario no esta logeado
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Registrarse", "Registrar", "Home", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Iniciar sesión", "Login", "Home")</li>
+    </ul>
+}

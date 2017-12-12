@@ -22,5 +22,7 @@ namespace Modelos
 
         [ForeignKey("idProvincia")]
         public virtual Provincia Provincia { get; set; }
+
+        public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }
