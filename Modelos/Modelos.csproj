@@ -62,10 +62,15 @@
     <Compile Include="Migrations\201712121156147_Usuarios.Designer.cs">
       <DependentUpon>201712121156147_Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712130911235_tipocotacto.cs" />
+    <Compile Include="Migrations\201712130911235_tipocotacto.Designer.cs">
+      <DependentUpon>201712130911235_tipocotacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Poblacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia.cs" />
+    <Compile Include="TipoContacto.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712121156147_Usuarios.resx">
       <DependentUpon>201712121156147_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712130911235_tipocotacto.resx">
+      <DependentUpon>201712130911235_tipocotacto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

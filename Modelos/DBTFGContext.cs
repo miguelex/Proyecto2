@@ -23,6 +23,7 @@
         public virtual DbSet<Provincia> Provincia { get; set; }
         public virtual DbSet<Poblacion> Poblacion { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<TipoContacto> TipoContacto { get; set; }
     }
 
     //public class MyEntity
