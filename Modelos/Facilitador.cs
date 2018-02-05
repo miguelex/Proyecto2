@@ -8,23 +8,18 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    [Table("Poblacion")]
-    public class Poblacion
+    [Table("Facilitador")]
+    public class Facilitador
     {
         [Key]
-        public int id{ get; set; }
+        public int id { set; get; }
 
         [Required]
         [StringLength(100)]
-        public string NombrePoblacion { get; set; }
+        public string nombre { set; get; }
 
-        public int idProvincia { get; set; }
-
-        [ForeignKey("idProvincia")]
-        public virtual Provincia Provincia { get; set; }
-
-        public virtual ICollection<Usuario> Usuario { get; set; }
-
+        public virtual ICollection<Valoracion> Valoracion { get; set; }
+       
         public virtual ICollection<Empresa> Empresa { get; set; }
     }
 }

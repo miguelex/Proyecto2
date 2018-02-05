@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    [Table("Usuario")]
-    public class Usuario
+    [Table("Propietario")]
+    public class Propietario
     {
         [Key]
         public int id { get; set; }
@@ -38,24 +38,16 @@ namespace Modelos
         [Index(IsUnique = true)]
         public string email { get; set; }
 
-        public bool bloqueado { get; set; }
+        public string direccion { get; set; }
 
-        public bool administrador { get; set; }
-
-        public int idPoblacion { get; set; }
-
-        [StringLength(9)]
         public string telefono { get; set; }
 
-        [ForeignKey("idPoblacion")]
-        public virtual Poblacion Poblacion { get; set; }
+        public bool bloqueado { get; set; }
 
-        public virtual ICollection<Comentario> Comentario { get; set; }
+        public bool activado { get; set; }
 
-        public virtual ICollection<Denuncia> Denuncia { get; set; }
+        public bool reseteado { get; set; }
 
-        public virtual ICollection<Valoracion> Valoracion { get; set; }
+        public virtual ICollection<Empresa> Empresa { get; set; }
     }
-
-
 }

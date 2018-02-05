@@ -49,7 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comentario.cs" />
     <Compile Include="DBTFGContext.cs" />
+    <Compile Include="Denuncia.cs" />
+    <Compile Include="Empresa.cs" />
+    <Compile Include="Facilitador.cs" />
     <Compile Include="Migrations\201711081134544_provincia-poblacion.cs" />
     <Compile Include="Migrations\201711081134544_provincia-poblacion.Designer.cs">
       <DependentUpon>201711081134544_provincia-poblacion.cs</DependentUpon>
@@ -66,12 +70,28 @@
     <Compile Include="Migrations\201712130911235_tipocotacto.Designer.cs">
       <DependentUpon>201712130911235_tipocotacto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801180909119_facilitador.cs" />
+    <Compile Include="Migrations\201801180909119_facilitador.Designer.cs">
+      <DependentUpon>201801180909119_facilitador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801180917199_bdtotal.cs" />
+    <Compile Include="Migrations\201801180917199_bdtotal.Designer.cs">
+      <DependentUpon>201801180917199_bdtotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801180921179_bdtotal2.cs" />
+    <Compile Include="Migrations\201801180921179_bdtotal2.Designer.cs">
+      <DependentUpon>201801180921179_bdtotal2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Poblacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propietario.cs" />
     <Compile Include="Provincia.cs" />
     <Compile Include="TipoContacto.cs" />
+    <Compile Include="TipoDenuncia.cs" />
+    <Compile Include="TipoEmpresa.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="Valoracion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -88,6 +108,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712130911235_tipocotacto.resx">
       <DependentUpon>201712130911235_tipocotacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180909119_facilitador.resx">
+      <DependentUpon>201801180909119_facilitador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180917199_bdtotal.resx">
+      <DependentUpon>201801180917199_bdtotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180921179_bdtotal2.resx">
+      <DependentUpon>201801180921179_bdtotal2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

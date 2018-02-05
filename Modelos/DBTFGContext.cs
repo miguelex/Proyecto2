@@ -24,6 +24,15 @@
         public virtual DbSet<Poblacion> Poblacion { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<TipoContacto> TipoContacto { get; set; }
+        public virtual DbSet<Empresa> Empresa { get; set; }
+        public virtual DbSet<TipoEmpresa> TipoEmpresa { get; set; }
+        public virtual DbSet<TipoDenuncia> TipoDenuncia { get; set; }
+        public virtual DbSet<Facilitador> Facilitador { get; set; }
+        public virtual DbSet<Propietario> Propietario { get; set; }
+        public virtual DbSet<Denuncia> Denuncia { get; set; }
+        public virtual DbSet<Comentario> Comentario { get; set; }
+        public virtual DbSet<Valoracion> Valoracion { get; set; }
+
     }
 
     //public class MyEntity
