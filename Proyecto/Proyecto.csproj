@@ -134,6 +134,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\FacilitadorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PoblacionController.cs" />
     <Compile Include="Controllers\ProvinciasController.cs" />
@@ -192,6 +193,11 @@
     <Content Include="Views\TipoEmpresa\Details.cshtml" />
     <Content Include="Views\TipoEmpresa\Edit.cshtml" />
     <Content Include="Views\TipoEmpresa\Index.cshtml" />
+    <Content Include="Views\Facilitador\Create.cshtml" />
+    <Content Include="Views\Facilitador\Delete.cshtml" />
+    <Content Include="Views\Facilitador\Details.cshtml" />
+    <Content Include="Views\Facilitador\Edit.cshtml" />
+    <Content Include="Views\Facilitador\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,32 @@
+﻿@model Modelos.Facilitador
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<h2>Borrar Facilitador</h2>
+
+<h3>¿Estas seguro de que deseas borrar el facilitador?</h3>
+<div>
+    <h4>Facilitador</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Nombre:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Atrás", "Index")
+        </div>
+    }
+</div>
