@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Modelos;
+using PagedList;
 
 namespace Proyecto.Controllers
 {
@@ -15,9 +16,12 @@ namespace Proyecto.Controllers
         private DBTFGContext db = new DBTFGContext();
 
         // GET: TipoContacto
-        public ActionResult Index()
+        public ActionResult Index(int? pagina)
         {
-            return View(db.TipoContacto.ToList());
+            var NumeroPagina = pagina ?? 1;
+            var TamañoPagina = 10;
+            var lista = db.TipoContacto.OrderBy(x => x.id).ToPagedList(NumeroPagina, TamañoPagina);
+            return View(lista);
         }
 
         // GET: TipoContacto/Details/5

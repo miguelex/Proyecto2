@@ -1,33 +1,49 @@
-﻿@model IEnumerable<Modelos.TipoContacto>
+﻿@using Modelos;
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<TipoContacto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tipo Contacto";
 }
 
-<h2>Index</h2>
+<h2>Tipo de contactos</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(" Añadir ", "Create", null, new { @class = "btn btn-default btn-success glyphicon glyphicon-plus" })
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombre)
+            @Html.Label("ID")
         </th>
-        <th></th>
+        <th>
+            @Html.Label("Nombre")
+        </th>
+        <th>
+            @Html.Label("Operaciones")
+        </th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink(" Editar ", "Edit", new { id = item.id }, new { @class = "btn btn-default btn-primary glyphicon glyphicon-edit" }) |
+            @Html.ActionLink(" Detalles ", "Details", new { id = item.id }, new { @class = "btn btn-default btn-info glyphicon glyphicon-eye-open" }) |
+            @Html.ActionLink(" Borrar ", "Delete", new { id = item.id }, new { @class = "btn btn-default btn-danger glyphicon glyphicon-trash" })
         </td>
     </tr>
-}
+    }
 
 </table>
+
+<div>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { pagina = page }))
+</div>
