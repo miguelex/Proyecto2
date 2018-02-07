@@ -138,6 +138,7 @@
     <Compile Include="Controllers\PoblacionController.cs" />
     <Compile Include="Controllers\ProvinciasController.cs" />
     <Compile Include="Controllers\TipoContactoController.cs" />
+    <Compile Include="Controllers\TipoDenunciaController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -180,6 +181,11 @@
     <Content Include="Views\Home\FAQ.cshtml" />
     <Content Include="Views\Home\Contacto.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\TipoDenuncia\Create.cshtml" />
+    <Content Include="Views\TipoDenuncia\Delete.cshtml" />
+    <Content Include="Views\TipoDenuncia\Details.cshtml" />
+    <Content Include="Views\TipoDenuncia\Edit.cshtml" />
+    <Content Include="Views\TipoDenuncia\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
