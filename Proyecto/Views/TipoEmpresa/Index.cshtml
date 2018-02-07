@@ -1,0 +1,50 @@
+﻿@using Modelos;
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<TipoEmpresa>
+
+@{
+    ViewBag.Title = "Tipo de Empresas";
+}
+
+<h2>Tipo Empresas</h2>
+
+<p>
+    @Html.ActionLink(" Añadir ", "Create", null, new { @class = "btn btn-default btn-success glyphicon glyphicon-plus" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("ID")
+        </th>
+        <th>
+            @Html.Label("Tipo de Empresa")
+        </th>
+        <th>
+            @Html.Label("Operaciones")
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.ActionLink(" Editar ", "Edit", new { id = item.id }, new { @class = "btn btn-default btn-primary glyphicon glyphicon-edit" }) |
+            @Html.ActionLink(" Detalles ", "Details", new { id = item.id }, new { @class = "btn btn-default btn-info glyphicon glyphicon-eye-open" }) |
+            @Html.ActionLink(" Borrar ", "Delete", new { id = item.id }, new { @class = "btn btn-default btn-danger glyphicon glyphicon-trash" })
+        </td>
+    </tr>
+    }
+
+</table>
+
+
+<div>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { pagina = page }))
+</div>

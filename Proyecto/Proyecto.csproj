@@ -139,6 +139,7 @@
     <Compile Include="Controllers\ProvinciasController.cs" />
     <Compile Include="Controllers\TipoContactoController.cs" />
     <Compile Include="Controllers\TipoDenunciaController.cs" />
+    <Compile Include="Controllers\TipoEmpresaController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -186,6 +187,11 @@
     <Content Include="Views\TipoDenuncia\Details.cshtml" />
     <Content Include="Views\TipoDenuncia\Edit.cshtml" />
     <Content Include="Views\TipoDenuncia\Index.cshtml" />
+    <Content Include="Views\TipoEmpresa\Create.cshtml" />
+    <Content Include="Views\TipoEmpresa\Delete.cshtml" />
+    <Content Include="Views\TipoEmpresa\Details.cshtml" />
+    <Content Include="Views\TipoEmpresa\Edit.cshtml" />
+    <Content Include="Views\TipoEmpresa\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
