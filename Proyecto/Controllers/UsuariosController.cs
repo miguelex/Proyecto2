@@ -7,18 +7,22 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Modelos;
+using PagedList;
 
 namespace Proyecto.Controllers
 {
+    //[Authorize(Users = "miguelex,rafa")]
     public class UsuariosController : Controller
     {
         private DBTFGContext db = new DBTFGContext();
 
         // GET: Usuarios
-        public ActionResult Index()
+        public ActionResult Index(int? pagina)
         {
-            var usuario = db.Usuario.Include(u => u.Poblacion);
-            return View(usuario.ToList());
+            var NumeroPagina = pagina ?? 1;
+            var TamañoPagina = 10;
+            var lista = db.Usuario.Include(u => u.Poblacion).OrderBy(x => x.id).ToPagedList(NumeroPagina, TamañoPagina);
+            return View(lista);
         }
 
         // GET: Usuarios/Details/5

@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+@* Breadcrumb *@
+<div class="page-header">
+    <h1>Acceder <small>Entra en tu cuenta</small></h1>
+</div>
+<ol class="breadcrumb">
+    <li><a href="~/">Inicio</a></li>
+    <li class="active">Login</li>
+</ol>
+@{ Html.RenderPartial("_Alerts"); }
+@using (Html.BeginForm("Entrar", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary(true, "Error");
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Login de usuarios</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            @Html.Label("Nick: ")
+                            @Html.TextBox("nick", null, new { @class = "form-control", placeholder = "Introduce Nick o correo electrónico", required = "required" })
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("Clave: ")
+                            @Html.Password("clave", null, new { @class = "form-control", placeholder = "Introduce tu clave", required = "required" })
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                        <hr />
+                        Si aun no tienes cuenta puedes registrarte a través de nuestro <a href="#">formulario</a>. Si olvidaste tu clave, accede <a href="~/Home/ResetClave">aquí</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

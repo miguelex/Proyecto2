@@ -1,0 +1,247 @@
+﻿@{
+    ViewBag.Title = "F.A.Q.";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+@* Breadcrumb *@
+<div class="page-header">
+    <h1>F.A.Q. <small>Respuestas a preguntas frecuentes</small></h1>
+</div>
+<ol class="breadcrumb">
+    <li><a href="~/">Inicio</a></li>
+    <li class="active">F.A.Q.</li>
+</ol>
+@* Contenido *@
+<div class="container">
+    <br />
+    <br />
+    <br />
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        Esta sección contiene una gran cantidad de información relacionada con Facilitador.
+        Si no puede encontrar una respuesta a su pregunta, asegúrese de <a href="~/Home/Contacto">contactarnos</a>.
+    </div>
+    <br />
+    <div class="panel-group" id="accordion">
+        <div class="faqHeader">Cuestiones generales</div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">¿Que es Facilitador?</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Facilitador es un proyecto sin animo de lucro que nace con el fin de acerca a personas con algun tipo de discapacidad a
+                    organismos, empresas y locales que ofrecen sus servicios de forma adaptada a sus necesidades.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">¿Tengo que registrame?</a>
+                </h4>
+            </div>
+            <div id="collapseTen" class="panel-collapse collapse">
+                <div class="panel-body">
+                    No. Puedes realizar tantas consultas como desee sin necesidad de tener una cuenta pero por contra n otendras la opción de realizar
+                    valoraciones, comentarios o denunciar informaciones falsas. Tampoco tendras acceso a un historial de busqueda que te facilite recordar
+                    aquel restaurante que tanto te gusto.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">¿Entonces Facilitador es una red social?</a>
+                </h4>
+            </div>
+            <div id="collapseEleven" class="panel-collapse collapse">
+                <div class="panel-body">
+                    No exactamente. La relación con otros usuarios se limita a leer sus opiniones y ver que votaron. Pero no es el objetivo nuestro el que acabes teniendo
+                    una relación de amistad.
+                </div>
+            </div>
+        </div>
+        <div class="faqHeader">Usuarios</div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">¿Tengo que poner mi teléfono?</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    No es obligatorio pero si lo pones era mas facil hace uso de la aplicación movil. Tranquilo, no se usara para hacer spam.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">He perdido mi contraseña ¿Que puedo hacer?</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    No te preocupes. Accede a este <a href="#">link</a> y nosotros te reseteamos la contraseña y puedes poner una nueva
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Si una empresa no ofrece lo que dice ¿Puedo denunciar?</a>
+                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Si compruebas que una empresa oferta una serie de servicios adaptados y ves que no es cierto puedes optar a <a href="~/Home/Contacto">
+                        denunciarlo
+                    </a> hacia nosotros para que tomemos
+                    las medidas oportunas (totalmente anonimo) o bien puedes indicarlo (aunque en este caso se vera tu nick).
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">¿Puedo valorar un mismo servico más de uan vez?</a>
+                </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse">
+                <div class="panel-body">
+                    En un mismo día solo lo podras valorar una vez. Pero puedes indicar tu grado de satisfacción en cada una de las visitas si asi lo consideras oportuno
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">¿Puedo darme de baja?</a>
+                </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Por supuesto. Indicanos en nuestro <a href="~/Home/Contacto">formulario de contacto</a> que te quieres dar de baja y borraremos todos tus datos de nuestras bases de datos.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">Si pongo mi correo o teléfono ¿Me enviareis spam?</a>
+                </h4>
+            </div>
+            <div id="collapseNine" class="panel-collapse collapse">
+                <div class="panel-body">
+                    No. No tenemos animo de lucro, asi que no te vamos a vender nada. Y cualqueir respuesta a comentrio tuyo se vera exclusivamente una vez acceda a la web.
+                    Solo nos pondriamos en contacto contigo en caso de baja, reseteo de la clave y áctivación de la cuenta.
+                </div>
+            </div>
+        </div>
+        <div class="faqHeader">Empresas</div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">¿Que tengo que hacer para publicitar mi negocio?</a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Lo priemro es registrarte como empresa. COn ellos podras luego crear tantos negocios, locales,... como desees.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">¿Es gratis?</a>
+                </h4>
+            </div>
+            <div id="collapseSeven" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Si. Pero tambien te pedimos que seas responsable. No publicites mas de lo debido, no falsees datos.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse13">¿Como indico donde esta mi local?</a>
+                </h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse">
+                <div class="panel-body">
+                    No te preocupes. Nosotros nos encargamos de ello. Tu danos la dirección y obtendremos las coordenadas.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse14">Mi local se decia a más de una actividad ¿Como lo indico?</a>
+                </h4>
+            </div>
+            <div id="collapse14" class="panel-collapse collapse">
+                <div class="panel-body">
+                    a la hora de crear tu comercio podras indicartantas actividades como desees. Posteriormente a la hora de localizarlo en el mapa, usaremos la primera
+                    actividad indicada como la principal para poder asignarle un icono. Pero si tu quieres que una sea la prioritaria nos lo podras indicar en el formulario.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse15">Me han denunciado ¿Que hago?</a>
+                </h4>
+            </div>
+            <div id="collapse15" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Tranquilo. Nuestro equipo se encargara de verificar la validez de la denuncia. Nos pondremos en contacto contigo y te daremos las opción de arreglarlo.
+                    En caso de ser cierta y no ser atendida en un tiempo prudencial, daremos de baja ese comercio en la base de datos.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br /><br />
+<style>
+    .panel-heading {
+        position: relative;
+    }
+
+    .faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }
+
+    .panel-heading [data-toggle="collapse"]:after {
+        font-family: 'Glyphicons Halflings';
+        content: "\e114"; /* "play" icon */
+        float: right;
+        color: #F58723;
+        font-size: 18px;
+        line-height: 22px;
+        /* rotate "play" icon from > (right arrow) to down arrow */
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    .panel-heading [data-toggle="collapse"].collapsed:after {
+        /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color: #454444;
+    }
+</style>
+

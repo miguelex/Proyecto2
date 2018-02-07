@@ -47,6 +47,8 @@ namespace Modelos
         [StringLength(9)]
         public string telefono { get; set; }
 
+        public DateTime creado { get; set; }
+
         [ForeignKey("idPoblacion")]
         public virtual Poblacion Poblacion { get; set; }
 
@@ -55,6 +57,55 @@ namespace Modelos
         public virtual ICollection<Denuncia> Denuncia { get; set; }
 
         public virtual ICollection<Valoracion> Valoracion { get; set; }
+
+        public Usuario Login(String nick, String clave)
+        {
+            // Método que atiende el login
+            var usuario = new Usuario();
+            Auxiliar aux = new Auxiliar();
+
+            usuario = Buscar(nick); // Buscamos al usaurio
+            if (usuario != null)
+            {
+                // Si hemos recibido un usuario (no es nulo)
+                if (usuario.clave == aux.claveToMD5(clave))
+                {
+                    return usuario; // Login correcto. Devolvemos el usuario al controlador
+                }
+            }
+            return null;
+        }
+
+        public Usuario Buscar(String correo)
+        {
+            // Método que nos va a permitir buscar a un usuario por su nick o por su correo
+            var usuario = new Usuario();
+            Auxiliar aux = new Auxiliar();
+            try
+            {
+                using (var context = new DBTFGContext())
+                {
+                    // EN priemr lugar debemos averigur si el nick pasaso es en relaidad un nick o un correo. 
+                    if (aux.IsValidEmail(correo))
+                        // Es un correo, asi que buscaremos al usuario cuyo correo coincida con el pasado por parametro
+                        usuario = context.Usuario.FirstOrDefault(u => u.email == correo);
+                    else
+                        // Es un nick, asi que buscamos por ese campo
+                        usuario = context.Usuario.FirstOrDefault(u => u.nick == correo);
+                    if (usuario != null)
+                    {
+                        // Si tenemos a un usuario, lo devolvemos
+                        return usuario;
+                    }
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
     }
 
 

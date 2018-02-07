@@ -1,25 +1,18 @@
 ﻿@model Modelos.Usuario
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>Detalles Usuario</h2>
 
 <div>
     <h4>Usuario</h4>
     <hr />
     <dl class="dl-horizontal">
+        
         <dt>
-            @Html.DisplayNameFor(model => model.Poblacion.NombrePoblacion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Poblacion.NombrePoblacion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.nick)
+            @Html.Label("Nick:")
         </dt>
 
         <dd>
@@ -27,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nombre)
+            @Html.Label("Nombre:")
         </dt>
 
         <dd>
@@ -35,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.apellidos)
+            @Html.Label("Apellidos:")
         </dt>
 
         <dd>
@@ -43,15 +36,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.clave)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.clave)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.email)
+            @Html.Label("Email:")
         </dt>
 
         <dd>
@@ -59,7 +44,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.bloqueado)
+            @Html.Label("Bloqueado")
         </dt>
 
         <dd>
@@ -67,7 +52,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.administrador)
+            @Html.Label("Administrador:")
         </dt>
 
         <dd>
@@ -75,7 +60,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.telefono)
+            @Html.Label("Teléfono:")
         </dt>
 
         <dd>
@@ -85,6 +70,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink(" Editar ", "Edit", new { id = Model.id }, new { @class = "btn btn-default btn-primary glyphicon glyphicon-edit" })
+    @Html.ActionLink("Atrás", "Index")
 </p>

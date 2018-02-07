@@ -1,6 +1,54 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
+@{ Html.RenderPartial("_Alerts"); }
 
-<h2>Index</h2>
+<!-- Buscador
+================================================== -->
+<br /> <br />
+<div class="panel-heading">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-xs-3">
+
+            </div>
+            <div class="col-xs-6 col-xs-offset-3">
+                @Html.TextBox("Cadena", null, new { @class = "form-control" })
+            </div>
+            <div class="col-xs-3">
+                <button type="submit" class="btn btn-primary" title="Buscar"><span class="glyphicon glyphicon-search"></span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Buscador -->
+<br /> <br />
+<!-- Marketing
+================================================== -->
+<div class="container marketing">
+    <!-- Three columns of text  -->
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img class="img-circle" src="http://placehold.it/140x140">
+            <h2>Tu perfil</h2>
+            <p>Accede a tu histórico de busquedas, comentarios, puntuaciones, actualiza tus datos, etc. Necesitas estar registrado</p>
+            <p><a class="btn btn-default" href="#"><i class="glyphicon glyphicon-user"> Ir a Perfil »</i></a></p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img class="img-circle" src="http://placehold.it/140x140">
+            <h2>Mi Empresa</h2>
+            <p>Conoce las opiniones y valoraciones que los usuarios tienen de tus locales. O añade/actualzia una nueva localización </p>
+            <p><a class="btn btn-default" href="#"><i class="glyphicon glyphicon-briefcase"> Mis empresas » </i></a></p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img class="img-circle" src="http://placehold.it/140x140">
+            <h2>Cerca de mi</h2>
+            <p>Busca si complicaciones. Todos aquellos organismos, locales y negocios que estan cerca de tu localizacion actual</p>
+            <p><a class="btn btn-default" href="#"><i class="glyphicon glyphicon-search"> Buscar »</i></a></p>
+        </div>
+    </div>
+</div>
+<!-- /Marketing -->
+<br /><br />
+
+

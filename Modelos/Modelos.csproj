@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auxiliar.cs" />
     <Compile Include="Comentario.cs" />
     <Compile Include="DBTFGContext.cs" />
     <Compile Include="Denuncia.cs" />
@@ -81,6 +82,10 @@
     <Compile Include="Migrations\201801180921179_bdtotal2.cs" />
     <Compile Include="Migrations\201801180921179_bdtotal2.Designer.cs">
       <DependentUpon>201801180921179_bdtotal2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802061020220_updateUsuario.cs" />
+    <Compile Include="Migrations\201802061020220_updateUsuario.Designer.cs">
+      <DependentUpon>201802061020220_updateUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Poblacion.cs" />
@@ -117,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801180921179_bdtotal2.resx">
       <DependentUpon>201801180921179_bdtotal2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802061020220_updateUsuario.resx">
+      <DependentUpon>201802061020220_updateUsuario.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
