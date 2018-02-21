@@ -101,16 +101,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -137,6 +142,7 @@
     <Compile Include="Controllers\FacilitadorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PoblacionController.cs" />
+    <Compile Include="Controllers\PropietarioController.cs" />
     <Compile Include="Controllers\ProvinciasController.cs" />
     <Compile Include="Controllers\TipoContactoController.cs" />
     <Compile Include="Controllers\TipoDenunciaController.cs" />
@@ -198,6 +204,11 @@
     <Content Include="Views\Facilitador\Details.cshtml" />
     <Content Include="Views\Facilitador\Edit.cshtml" />
     <Content Include="Views\Facilitador\Index.cshtml" />
+    <Content Include="Views\Propietario\Create.cshtml" />
+    <Content Include="Views\Propietario\Delete.cshtml" />
+    <Content Include="Views\Propietario\Details.cshtml" />
+    <Content Include="Views\Propietario\Edit.cshtml" />
+    <Content Include="Views\Propietario\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

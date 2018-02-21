@@ -1,0 +1,90 @@
+﻿@model Modelos.Propietario
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle del propietario</h2>
+
+<div>
+    <h4>Propietario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Nick: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nick)
+        </dd>
+
+        <dt>
+            @Html.Label("Nombre: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.Label("Apellidos: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidos)
+        </dd>
+
+        <dt>
+            @Html.Label("Email: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.Label("Dirección: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.Label("Teléfono: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.Label("Bloqueado: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bloqueado)
+        </dd>
+
+        <dt>
+            @Html.Label("Activado: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activado)
+        </dd>
+
+        <dt>
+            @Html.Label("Reseteado: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reseteado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" Editar ", "Edit", new { id = Model.id }, new { @class = "btn btn-default btn-primary glyphicon glyphicon-edit" })
+    @Html.ActionLink("Atrás", "Index")
+</p>
